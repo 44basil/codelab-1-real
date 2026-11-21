@@ -32,7 +32,7 @@ int main() {
     classificationTable();
     int speed = getNum();
 
-// If and else statements classify the internet speed based on the user input
+// If and else statements classify the internet speed based on the user input and outputs the relative broadband speed
 
     if (speed >= 0 && speed <= 5) {
         cout << "Your internet speed is classified as: Very slow broadband" << endl;
