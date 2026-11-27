@@ -21,6 +21,13 @@ int main(){
         int minutes = (int)paceTimes[i];
         int seconds = (int)((paceTimes[i] - minutes) * 100);
         totalSeconds += (minutes * 60) + seconds;
+
+        while (seconds < 0 || seconds >= 60) {
+            cout << "Invalid input. Please enter a valid pace time in the correct format (e.g 8.12): ";
+            cin >> paceTimes[i];
+            minutes = (int)paceTimes[i];
+            seconds = (int)((paceTimes[i] - minutes) * 100);
+        }
     }
 
     averageSeconds = totalSeconds / 7;
